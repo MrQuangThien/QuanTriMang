@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or 'Network AutoManager' }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">N</div><div><strong>Network</strong><span>AutoManager</span></div></div>
+      <nav>
+        <a href="/" class="nav-link" data-page="dashboard">▦ <span>Dashboard</span></a>
+        <div class="nav-title">NETWORK</div>
+        <a href="/devices" class="nav-link" data-page="devices">◉ <span>Devices</span></a>
+        <a href="/gns3" class="nav-link" data-page="gns3">◇ <span>GNS3 Topology</span></a>
+        <div class="nav-title">AUTOMATION</div>
+        <a href="/backups" class="nav-link" data-page="backups">↥ <span>Backups</span></a>
+        <a href="/diff" class="nav-link" data-page="diff">⇄ <span>Configuration Diff</span></a>
+        <a href="/restore" class="nav-link" data-page="restore">↻ <span>Restore</span></a>
+        <div class="nav-title">MONITORING</div>
+        <a href="/monitoring" class="nav-link" data-page="monitoring">◔ <span>Performance</span></a>
+        <a href="/activity" class="nav-link" data-page="activity">☷ <span>Activity Logs</span></a>
+      </nav>
+      <div class="sidebar-footer"><span class="dot online"></span> System ready</div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">NETWORK OPERATIONS</div><h1>{{ heading or 'Dashboard' }}</h1></div>
+        <div class="top-status"><span class="status-pill"><i class="dot online"></i> API Online</span><span class="status-pill" id="agentStatus">Agent checking...</span></div>
+      </header>
+      <section class="content">{% block content %}{% endblock %}</section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="{{ url_for('static', path='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

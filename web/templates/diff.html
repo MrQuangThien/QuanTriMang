@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% set heading='Configuration Diff' %}{% block content %}
+<div class="page-intro"><div><h2>So sánh cấu hình</h2><p>So sánh hai bản backup gần nhất của thiết bị.</p></div><div class="command-row compact"><select id="diffDevice"><option>R1</option></select><button class="btn primary" onclick="loadDiffPage()">So sánh</button></div></div>
+<div class="panel"><div id="diffMeta"></div><pre id="diffOutput" class="diff-view">Chọn thiết bị và bấm So sánh.</pre></div>
+{% endblock %}

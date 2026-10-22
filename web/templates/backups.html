@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% set heading='Backups' %}{% block content %}
+<div class="page-intro"><div><h2>Lịch sử sao lưu</h2><p>Mỗi lần backup được lưu theo timestamp và commit vào Git.</p></div><button class="btn primary" onclick="backupAll()">↥ Backup ngay</button></div>
+<div class="panel"><div id="backupsTable" class="table-wrap"></div></div>
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% set heading='Restore' %}{% block content %}
+<div class="page-intro"><div><h2>Khôi phục cấu hình</h2><p>Chỉ restore các file .cfg nằm trong thư mục backups.</p></div></div>
+<div class="panel form-panel"><label>Thiết bị<select id="restoreDevice"></select></label><label>Backup file<select id="restoreFile"></select></label><div class="warning">⚠ Restore sẽ ghi cấu hình lên thiết bị. Hãy kiểm tra backup trước khi xác nhận.</div><button class="btn danger" onclick="restoreSelected()">↻ Confirm Restore</button><pre id="restoreOutput" class="console">Chưa thực hiện restore.</pre></div>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% set heading='GNS3 Topology' %}{% block content %}
+<div class="page-intro"><div><h2>GNS3 Server</h2><p>Kiểm tra kết nối và xem project/node đang chạy.</p></div><button class="btn primary" onclick="loadGns3()">Refresh</button></div>
+<div class="stats-grid"><div class="stat-card"><span>GNS3</span><strong id="gnsStatus">—</strong><small>192.168.56.1:3080</small></div><div class="stat-card"><span>Projects</span><strong id="projectCount">—</strong><small>GNS3 projects</small></div></div>
+<div class="panel"><div class="panel-head"><div><h3>Projects</h3><p>Chọn project để xem nodes.</p></div></div><div id="projectsTable" class="table-wrap"></div></div><div class="panel"><h3>Nodes</h3><div id="nodesTable" class="table-wrap">Chưa chọn project.</div></div>
+{% endblock %}

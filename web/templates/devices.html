@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% set heading='Devices' %}{% block content %}
+<div class="page-intro"><div><h2>Thiết bị mạng</h2><p>Danh sách router/switch đang được Network AutoManager quản lý.</p></div><button class="btn primary" onclick="backupAll()">↥ Backup tất cả</button></div>
+<div class="panel"><div id="devicesTable" class="table-wrap"></div></div>
+<div class="panel command-panel"><div class="panel-head"><div><h3>Command Console</h3><p>Gửi lệnh IOS thông qua Ubuntu Agent.</p></div></div><div class="command-row"><select id="cmdDevice"></select><input id="cmdInput" placeholder="show ip interface brief"><button class="btn primary" onclick="sendCommand()">Run</button></div><pre id="cmdOutput" class="console">Chưa có lệnh.</pre></div>
+{% endblock %}

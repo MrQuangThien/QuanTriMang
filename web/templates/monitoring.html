@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% set heading='Performance' %}{% block content %}
+<div class="page-intro"><div><h2>Performance Monitoring</h2><p>CPU, memory và temperature của thiết bị.</p></div><div class="command-row compact"><select id="metricDevice"><option>R1</option></select><button class="btn primary" onclick="loadMetricsPage()">Refresh</button></div></div>
+<div class="metrics-grid"><div class="metric-card"><span>CPU</span><strong id="cpuMetric">—</strong><div class="meter"><i id="cpuBar"></i></div></div><div class="metric-card"><span>Memory</span><strong id="memMetric">—</strong><div class="meter"><i id="memBar"></i></div></div><div class="metric-card"><span>Temperature</span><strong id="tempMetric">—</strong><div class="meter"><i id="tempBar"></i></div></div></div>
+<div class="panel"><h3>Raw output</h3><pre id="metricRaw" class="console">Chưa tải.</pre></div>
+{% endblock %}

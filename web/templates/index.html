@@ -1,0 +1,17 @@
+{% extends 'base.html' %}{% set heading='Dashboard' %}{% block content %}
+<div class="hero"><div><span class="badge">AUTOMATION CENTER</span><h2>Quản trị cấu hình mạng tập trung</h2><p>Sao lưu, phát hiện thay đổi, khôi phục và theo dõi thiết bị từ một dashboard.</p></div><button class="btn primary" onclick="backupAll()">↥ Backup tất cả</button></div>
+<div class="stats-grid">
+  <div class="stat-card"><span>Thiết bị</span><strong id="statDevices">—</strong><small>Đang quản lý</small></div>
+  <div class="stat-card"><span>Backups</span><strong id="statBackups">—</strong><small>Tổng bản sao</small></div>
+  <div class="stat-card"><span>Changed</span><strong id="statChanged">—</strong><small>Cấu hình thay đổi</small></div>
+  <div class="stat-card"><span>Agent</span><strong id="statAgent">—</strong><small>Ubuntu Agent</small></div>
+</div>
+<div class="grid-2">
+ <div class="panel"><div class="panel-head"><div><h3>Thiết bị</h3><p>Trạng thái hiện tại</p></div><a class="text-btn" href="/devices">Xem tất cả →</a></div><div id="deviceList" class="device-list"><div class="loading">Đang tải...</div></div></div>
+ <div class="panel"><div class="panel-head"><div><h3>Backup gần đây</h3><p>Lịch sử thao tác</p></div><a class="text-btn" href="/backups">Xem tất cả →</a></div><div id="recentBackups" class="table-wrap"></div></div>
+</div>
+<div class="grid-2">
+ <div class="panel"><div class="panel-head"><div><h3>Quick Actions</h3><p>Thao tác nhanh với R1</p></div></div><div class="actions"><button class="action" onclick="quickBackup('R1')">↥<span>Backup R1</span></button><button class="action" onclick="showMetrics('R1')">◔<span>Metrics</span></button><button class="action" onclick="showDiff('R1')">⇄<span>Diff</span></button><button class="action" onclick="showCommand('R1')">⌘<span>Command</span></button></div></div>
+ <div class="panel"><div class="panel-head"><div><h3>Hệ thống</h3><p>Connectivity</p></div></div><div class="system-list"><div><span>Windows FastAPI</span><b class="ok">ONLINE</b></div><div><span>Ubuntu Agent</span><b id="sysAgent">CHECKING</b></div><div><span>GNS3 Server</span><b id="sysGns3">CHECKING</b></div></div></div>
+</div>
+{% endblock %}

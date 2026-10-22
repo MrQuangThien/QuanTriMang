@@ -1,0 +1,21 @@
+devices:
+  - name: R1
+    host: 192.168.56.201
+    port: 22
+    device_type: cisco_ios
+    username_env: R1_USERNAME
+    password_env: R1_PASSWORD
+    legacy_ssh: true
+    enabled: true
+    description: "Cisco IOS router - GNS3"
+
+
+  - name: R2
+    host: 192.168.56.202
+    port: 22
+    device_type: cisco_ios
+    username_env: R2_USERNAME
+    password_env: R2_PASSWORD
+    legacy_ssh: true
+    enabled: true
+    description: "Cisco IOS router - GNS3"

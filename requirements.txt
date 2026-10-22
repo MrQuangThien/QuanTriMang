@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+netmiko
+paramiko
+pyyaml
+python-dotenv
+sqlalchemy
+gitpython
+textfsm
+jinja2
+requests
+pytest
